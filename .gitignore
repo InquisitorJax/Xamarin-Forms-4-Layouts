@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/XF4Layouts/v15
+/XF4Layouts/bin/Debug/netstandard2.0
+/XF4Layouts/obj
+/XF4Layouts.Android/bin/Debug
+/XF4Layouts.Android/obj
+/XF4Layouts.iOS/obj
+/XF4Layouts.UWP/obj
