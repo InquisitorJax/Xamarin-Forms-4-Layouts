@@ -20,12 +20,12 @@ namespace XF4Layouts
 
 		private void ToggleCollapse()
 		{
-			if (DeviceInfo.Platform == DevicePlatform.Android)
-			{
-				//BUG iOS pre7: doesn't collapse the section, only makes the label invisible
+			//if (DeviceInfo.Platform == DevicePlatform.Android)
+			//{
+				//BUG iOS pre7+: doesn't collapse the section, only makes the label invisible
 				IsExpanded = !IsExpanded;
 				OnPropertyChanged(nameof(IsExpanded));
-			}
+			//}
 		}
 
 		public ICommand ToggleCollapseCommand { get; }
