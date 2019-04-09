@@ -19,10 +19,10 @@ namespace XF4Layouts
 		{
 			Cars = new ObservableCollection<Car>
 			{
-				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.White },
-				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = string.Concat(Enumerable.Repeat($"Some description {Environment.NewLine}", 5)), Color = Color.AntiqueWhite },
-				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.AliceBlue},
-				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.Beige },
+				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Notes = "test car", Description = "Some description", Color = Color.Black },
+				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = string.Concat(Enumerable.Repeat($"Some description {Environment.NewLine}", 5)), Color = Color.Purple },
+				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.CornflowerBlue},
+				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.Brown },
 				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.Orange },
 				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.DarkBlue },
 				new Car { Abbreviation = "VW", Make="VolksWagen", Name = "Polo", Description = "Some description", Color = Color.DarkOrange },

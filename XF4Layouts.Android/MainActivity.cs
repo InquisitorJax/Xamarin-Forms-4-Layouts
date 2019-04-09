@@ -19,6 +19,8 @@ namespace XF4Layouts.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+			Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
 			Forms.SetFlags("Shell_Experimental", "CollectionView_Experimental");
 			Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

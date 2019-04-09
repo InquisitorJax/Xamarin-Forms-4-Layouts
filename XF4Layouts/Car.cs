@@ -40,6 +40,14 @@ namespace XF4Layouts
 			set { SetProperty(ref _description, value); }
 		}
 
+		private string _notes;
+
+		public string Notes
+		{
+			get { return _notes; }
+			set { SetProperty(ref _notes, value); }
+		}
+
 		private Color _color;
 
 		public Color Color
