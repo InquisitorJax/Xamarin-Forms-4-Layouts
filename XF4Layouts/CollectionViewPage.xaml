@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="XF4Layouts.CollectionViewPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:xf4layouts="clr-namespace:XF4Layouts">
+	<ContentPage.Content>
+		<Grid>
+			<!--  CollectionView to be used for paging  -->
+			<CollectionView
+				x:Name="CV"
+				ItemSizingStrategy="MeasureAllItems"
+				ItemsSource="{Binding Cars}"
+				SelectionMode="None">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<!--  BUG (pre7): seems to be binding to page BindingContext, and not Section  -->
+						<xf4layouts:CarView Padding="0,10,0,0" />
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

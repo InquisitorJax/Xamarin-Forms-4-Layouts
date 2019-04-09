@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Prism.Commands;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace XF4Layouts
@@ -11,7 +8,25 @@ namespace XF4Layouts
 	{
 		public MainPage()
 		{
+			OpenListViewCommand = new DelegateCommand(OpenListView);
+			OpenCollectionViewCommand = new DelegateCommand(OpenCollectionView);
+			BindingContext = this;
 			InitializeComponent();
 		}
+
+		public ICommand OpenListViewCommand { get; }
+
+		public ICommand OpenCollectionViewCommand { get; }
+
+		private void OpenListView()
+		{
+			Navigation.PushAsync(new ListViewPage());
+		}
+
+		private void OpenCollectionView()
+		{
+			Navigation.PushAsync(new CollectionViewPage());
+		}
+
 	}
 }

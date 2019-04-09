@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
 
 namespace XF4Layouts.Droid
 {
@@ -18,7 +19,8 @@ namespace XF4Layouts.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+			Forms.SetFlags("Shell_Experimental", "CollectionView_Experimental");
+			Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
     }

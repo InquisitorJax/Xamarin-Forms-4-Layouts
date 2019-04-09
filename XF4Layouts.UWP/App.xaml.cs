@@ -52,7 +52,8 @@ namespace XF4Layouts.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+				Xamarin.Forms.Forms.SetFlags("Shell_Experimental", "CollectionView_Experimental");
+				Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

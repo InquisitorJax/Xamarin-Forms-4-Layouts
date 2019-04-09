@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="XF4Layouts.ListViewPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:xf4layouts="clr-namespace:XF4Layouts"
+	Title="List View">
+	<ContentPage.Content>
+		<Grid>
+			<ListView
+				HasUnevenRows="True"
+				ItemsSource="{Binding Cars}"
+				SelectionMode="None"
+				SeparatorVisibility="None">
+				<!--  BUG (pre8) recycled cells are not measured when cycled  -->
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<xf4layouts:CarView Padding="0,10,0,0" />
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
