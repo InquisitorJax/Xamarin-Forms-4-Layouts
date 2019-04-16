@@ -12,6 +12,10 @@
 				ItemSizingStrategy="MeasureAllItems"
 				ItemsSource="{Binding Cars}"
 				SelectionMode="None">
+				<CollectionView.ItemsLayout>
+					<!--  BUG (pre8) binding to viewmodel property for Span doesn't seem to work  -->
+					<GridItemsLayout Orientation="Vertical" Span="{Binding GridSpan}" />
+				</CollectionView.ItemsLayout>
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
 						<!--  BUG (pre7): seems to be binding to page BindingContext, and not Section  -->
