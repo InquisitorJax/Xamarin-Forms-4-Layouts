@@ -12,7 +12,7 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="*" />
 			</Grid.RowDefinitions>
-			<Label Text="4Pre8: Cell recycle seems to be broken: Collapse doesn't work once recycled ; Cell Size not honored. ; Circle CornerRadius calc not fired (Works 4Pre7) " TextColor="Red" />
+			<Label Text="4Pre9: Cell recycle seems to be broken: Collapse doesn't work once recycled ; Cell Size not honored. ; Circle CornerRadius calc not fired (Works 4Pre7) " TextColor="Red" />
 			<ListView
 				Grid.Row="1"
 				HasUnevenRows="True"
