@@ -12,11 +12,19 @@
 					AlignItems="Center"
 					BindableLayout.ItemsSource="{Binding Cars}"
 					Direction="Column"
-					JustifyContent="Center"
+					JustifyContent="Start"
 					Wrap="Wrap">
 					<BindableLayout.ItemTemplate>
 						<DataTemplate>
-							<xf4layouts:CarView WidthRequest="200" />
+							<xf4layouts:CarView>
+								<xf4layouts:CarView.WidthRequest>
+									<OnIdiom
+										x:TypeArguments="x:Double"
+										Phone="200"
+										Tablet="400" />
+								</xf4layouts:CarView.WidthRequest>
+
+							</xf4layouts:CarView>
 						</DataTemplate>
 					</BindableLayout.ItemTemplate>
 				</FlexLayout>
