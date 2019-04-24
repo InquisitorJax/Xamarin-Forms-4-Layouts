@@ -10,6 +10,10 @@ namespace XF4Layouts
 		{
 			OpenListViewCommand = new DelegateCommand(OpenListView);
 			OpenCollectionViewCommand = new DelegateCommand(OpenCollectionView);
+			OpenCarouselViewCommand = new DelegateCommand(OpenCarouselView);
+			OpenFlexLayoutViewCommand = new DelegateCommand(OpenFlexLayoutView);
+			OpenPagedCollectionViewCommand = new DelegateCommand(OpenPagedCollectionView);
+
 			BindingContext = this;
 			InitializeComponent();
 		}
@@ -17,6 +21,12 @@ namespace XF4Layouts
 		public ICommand OpenListViewCommand { get; }
 
 		public ICommand OpenCollectionViewCommand { get; }
+
+		public ICommand OpenCarouselViewCommand { get; }
+
+		public ICommand OpenPagedCollectionViewCommand { get; }
+
+		public ICommand OpenFlexLayoutViewCommand { get; }
 
 		private void OpenListView()
 		{
@@ -27,6 +37,22 @@ namespace XF4Layouts
 		{
 			Navigation.PushAsync(new CollectionViewPage());
 		}
+
+		private void OpenCarouselView()
+		{
+			Navigation.PushAsync(new CarouselViewPage());
+		}
+
+		private void OpenFlexLayoutView()
+		{
+			Navigation.PushAsync(new FlexLayoutPage());
+		}
+
+		private void OpenPagedCollectionView()
+		{
+			Navigation.PushAsync(new PagedCollectionPage());
+		}
+
 
 	}
 }

@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 namespace XF4Layouts
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class FlexLayoutPage : ContentPage
+	public partial class PagedCollectionPage : ContentPage
 	{
-		public FlexLayoutPage ()
+		public PagedCollectionPage ()
 		{
 			BindingContext = new SampleViewModel();
 			InitializeComponent ();

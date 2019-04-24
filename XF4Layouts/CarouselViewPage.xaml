@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="XF4Layouts.CarouselViewPage"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:xf4layouts="clr-namespace:XF4Layouts">
+	<ContentPage.Content>
+		<Grid>
+			<CarouselView
+				x:Name="CV"
+				Margin="10"
+				HeightRequest="300"
+				HorizontalOptions="Center"
+				ItemsSource="{Binding Cars}"
+				VerticalOptions="CenterAndExpand">
+				<CarouselView.ItemsLayout>
+					<GridItemsLayout
+						Orientation="Horizontal"
+						SnapPointsAlignment="Center"
+						SnapPointsType="Mandatory" />
+				</CarouselView.ItemsLayout>
+				<CarouselView.ItemTemplate>
+					<DataTemplate>
+						<xf4layouts:CarView WidthRequest="300" />
+					</DataTemplate>
+				</CarouselView.ItemTemplate>
+			</CarouselView>
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>
