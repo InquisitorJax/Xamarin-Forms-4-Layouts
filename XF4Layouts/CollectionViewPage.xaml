@@ -11,7 +11,6 @@
 			                ItemsSource="{Binding Cars}"
 			                SelectionMode="None">
 				<CollectionView.ItemsLayout>
-					<!--  BUG (pre8) binding to viewmodel "GridSpan" property for Span doesn't seem to work  -->
 					<GridItemsLayout Orientation="Horizontal"
 					                 SnapPointsAlignment="Start"
 					                 SnapPointsType="Mandatory"
@@ -20,7 +19,6 @@
 				</CollectionView.ItemsLayout>
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
-						<!--  BUG (pre7): seems to be binding to page BindingContext, and not Section  -->
 						<xf4layouts:CarView Padding="0,10,0,0" WidthRequest="200" />
 					</DataTemplate>
 				</CollectionView.ItemTemplate>
