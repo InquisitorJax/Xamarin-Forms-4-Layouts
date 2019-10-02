@@ -17,7 +17,7 @@ namespace XF4Layouts
 			try
 			{
 				// NOTE: For android, make sure to run 'adb forward tcp:8000 tcp:8000' command - you'll need to do this if you've restarted your machine
-				HotReloader.Current.Start(this);
+				HotReloader.Current.Run(this);
 			}
 			catch (SocketException)
 			{

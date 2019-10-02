@@ -10,16 +10,7 @@ namespace XF4Layouts
 	{
 		public SampleViewModel()
 		{
-			GridSpan = Device.Idiom == TargetIdiom.Phone ? 1 : 2;
 			BuildCars();
-		}
-
-		private int _gridSpan;
-
-		public int GridSpan
-		{
-			get { return _gridSpan; }
-			set { SetProperty(ref _gridSpan, value); }
 		}
 
 		private void BuildCars()

@@ -1,24 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-	x:Class="XF4Layouts.CollectionViewPage"
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:xf4layouts="clr-namespace:XF4Layouts">
+<ContentPage x:Class="XF4Layouts.CollectionViewPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xf4layouts="clr-namespace:XF4Layouts">
 	<ContentPage.Content>
 		<Grid>
 			<!--  CollectionView to be used for paging  -->
-			<CollectionView
-				x:Name="CV"
-				ItemSizingStrategy="MeasureAllItems"
-				ItemsSource="{Binding Cars}"
-				SelectionMode="None">
+			<CollectionView x:Name="CV"
+			                ItemSizingStrategy="MeasureAllItems"
+			                ItemsSource="{Binding Cars}"
+			                SelectionMode="None">
 				<CollectionView.ItemsLayout>
 					<!--  BUG (pre8) binding to viewmodel "GridSpan" property for Span doesn't seem to work  -->
-					<GridItemsLayout
-						Orientation="Horizontal"
-						SnapPointsAlignment="Start"
-						SnapPointsType="Mandatory"
-						Span="2" />
+					<GridItemsLayout Orientation="Horizontal"
+					                 SnapPointsAlignment="Start"
+					                 SnapPointsType="Mandatory"
+					                 Span="{OnIdiom Phone=1,
+					                                Tablet=2}" />
 				</CollectionView.ItemsLayout>
 				<CollectionView.ItemTemplate>
 					<DataTemplate>
